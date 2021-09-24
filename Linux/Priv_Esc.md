@@ -25,7 +25,7 @@ uname -ar
 uname -mrs
 rpm -q kernel
 dmesg | grep Linux
-ls /boot | grep vmlinuz-                                                                                                                         
+ls /boot | grep vmlinuz-
 ```
 ## Environmental Variables
 ```
@@ -185,7 +185,7 @@ exec 3<>/dev/tcp/www.google.com/80
 echo -e "GET / HTTP/1.1\r\nhost: http://www.google.com\r\nConnection: close\r\n\r\n" >&3
 cat <&3
 ```
-La primera línea hace que el descriptor de archivo 3 se abra para leer y escribir en el socket TCP/IP especificado. Esta es una forma especial de la declaración ejecutiv desde la página del manbual de bash.
+La primera línea hace que el descriptor de archivo 3 se abra para leer y escribir en el socket TCP/IP especificado. Esta es una forma especial de la declaración ejecutiva desde la página del manual de bash.
 
 
 Segunda linea: Una vez que el socket está abierto, envíamos nuestra solicutd HTTP fuera del socket con el comando echo ..> &3. La solicitud consta de:
