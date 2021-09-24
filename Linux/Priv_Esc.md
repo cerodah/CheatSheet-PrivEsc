@@ -165,6 +165,18 @@ cat /home/cerodah
 ```
 dependiendo de los permisos podriamos cambiar el path de quien corre el comando y poner PRIMERO el path a donde metemos nuestro evil cat
 
+
+# Kernel exploits
+Una forma de encontrar un exploit de kernel es obtener la versión especifica del kernel y su dicha distribución de Linux, haciendp ```uname -a```. Copie lo que le imprime en pantalla y búquela por Google o en exploit-db.
+
+## CVE-2016-5195 (DirtyCow)
+Kernel Linux <= 3.19.0-73.8 
+
+## CVE-2010-3904 (RDS)
+Linux RDS Exploit - Linux Kernel <= 2.6.36-rc8
+
+##CVE-2010-4258 (Full Nelson)
+# nux Kernel 2.6.37 (RedHat / Ubuntu 10.04)
 # Otros
 ##Mempodipper
 
