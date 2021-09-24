@@ -179,20 +179,22 @@ uid=0(root)
 ## Wget without Wget
 Información sobre el archivo /dev/tcp integrado en Bash (TCP/IP).
 
-El siguiente script obtiene la pagina principal de Google:
+El siguiente script obtiene la página principal de Google:
 ```
 exec 3<>/dev/tcp/www.google.com/80
 echo -e "GET / HTTP/1.1\r\nhost: http://www.google.com\r\nConnection: close\r\n\r\n" >&3
 cat <&3
 ```
-La primera línea hace que el descriptor de archivo 3 se abra para ller y escribir en el socket TCP/IP especificado. Esta es una forma especial de la declaración ejecutiva. DEsde la página del manbual de bash.
-Segunda linea: Una vez que el socket está abierto, envíamos nuestra solicutd HTTP fuera del socker con el comando echo ..> &3. La solicitud consta de:
+La primera línea hace que el descriptor de archivo 3 se abra para leer y escribir en el socket TCP/IP especificado. Esta es una forma especial de la declaración ejecutiv desde la página del manbual de bash.
+
+
+Segunda linea: Una vez que el socket está abierto, envíamos nuestra solicutd HTTP fuera del socket con el comando echo ..> &3. La solicitud consta de:
 ```
 GET / HTTP/1.1
 host: http://www.google.com
 Connection: close
 ```
-Cada línea va seguida de un retorno de carro y una nueva línea, y todos los encabezadps 2 están seguidos de una línea en blanco para señalar el final de la solicitud (todo esto esmatwrial estándar de HTTP).
+Cada línea va seguida de un retorno de carro y una nueva línea, y todos los encabezados 2 están seguidos de una línea en blanco para señalar el final de la solicitud (todo esto es material estándar de HTTP).
 
 
 Tercera línea: A continuación, leemos la respuesta del socket usando "cat <&3", que lee la respuesta y la imprime.
