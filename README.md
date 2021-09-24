@@ -1,2 +1,2 @@
 # CheatSheet-PrivEsc
-Trucos de escalación de priviliegios Linux
+Trucos de escalación de priviliegios Linux y Windows
