@@ -37,3 +37,20 @@ wmic logicaldisk get caption
 diskpart
 list volume
 ```
+```
+Get-PSDrive | where {$_.Provider -like "Microsoft.PowerShell.Core\FileSystem"}| ft Name,Root
+
+get-psdrive -psprovider filesystem
+```
+# Mount/map
+```
+net use \\IP address\IPC$ "" /u:""
+net use \\192.168.1.101\IPC$ "" /u:""
+```
+# Users
+## Whoami
+```
+whoami /priv
+echo %USERNAME%
+$env:UserName
+```
