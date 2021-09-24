@@ -145,6 +145,19 @@ find / -group root -perm -2000 -print 2>/dev/null
 ```
 find / -perm -4000 -p -perm -2000 -print 2>/dev/null
 ```
+# What's jobs are scheduled?
+```
+cat /etc/syslog.conf
+cat /etc/chttp.conf
+cat /etc/lighttpd.conf
+cat /etc/cups/cupsd.conf
+cat /etc/inetd.conf
+cat /etc/apache2/apache2.conf
+cat /etc/my.conf
+cat /etc/httpd/conf/httpd.conf
+cat /opt/lampp/etc/httpd.conf
+ls -aRl /etc/ | awk '$1 ~ /^.*r.*/
+```
 # PATH HIJACKING
 Si un cron corre un binario o script sin PATH, ejemplo.
 ```
