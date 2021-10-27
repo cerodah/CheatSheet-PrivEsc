@@ -136,6 +136,7 @@ portfwd add -l <attacker port> -p <victim port> -r <victim ip>
 portfwd add -l 3306 -p 3306 -r 192.168.1.101
 ```
 Entonces, ¿cómo de debería de interpretar la salida del netstat?
+
 **Dirección local 0.0.0.0**
 
 La dirección local 0.0.0.0 significa que el servicio está escuchando en todas las interfaces. Esto significa que puede recibir una conexión desde la tarjeta de red, desde la interfaz loopback o cualquier otra interfaz. Esto significa que cualquiera puede conectarse a él.
