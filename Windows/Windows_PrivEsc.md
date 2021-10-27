@@ -148,4 +148,20 @@ La dirección local 127.0.0.1 significa que el servicio solo está escuchando la
 **Dirección local 192.168.1.9**
 
 La dirección local 192.168.1.9 significa que el servicio solo escucha las conexiones de la red local. Entonces, alguien de la red local puede conectarse, pero no alguien de Internet. ¡Esto también es interesante para nosotros! 
+# Kernel Explotation
+Este tipo de vulnerabilidades tendria que ser nuestro último recurso a utilizar, ya que podía provocar que la máquina se encuentre en un estado inestable o crear algún problema con la máquina
+## Indentify hotfixes/patches
+```
+systeminfo
+#or
+wmic qfe get Caption,Description,HotFixID,InstalledOn
+```
+## Python to Binary
+Si tenemos un exploit escrito en Python pero no tenemos Python instalado en la máquina víctima, siempre podemos transformarlo en un binario con pyinstaller. Buen truco para saber. 
 
+## Scheduled Tasks
+En este momento tenemos que buscar tareas que osn ejecutadas por un usuario elevado y que ejecuta un binario que podemos sobrescribir.
+```
+schtasks /query /fo LIST /v
+```
+Esto, en teoría produce una gran cantidad de texto. Pero puedes generar cadenas relevantes con ```findstr```.
